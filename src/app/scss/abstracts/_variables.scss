@@ -1,0 +1,26 @@
+$colors: (
+  // lightTheme
+  text-lt: #3f3f3f,
+  bg-lt: #ffffff,
+
+  // darkTheme
+  text-dt: #e2e2e2,
+  bg-dt: #000000,
+
+  //generals
+  error: #c9201d,
+  accent: #797979,
+  primary: blueviolet,
+  secondary: #f4f4f4,
+);
+$space: .9375rem;
+$w-full: 100%;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// $tablet: 768px;
+// $mobileL: 425px;
+// $mobile: 375px;
+// $mobileS: 320px;

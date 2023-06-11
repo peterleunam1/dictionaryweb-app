@@ -1,0 +1,19 @@
+@import '../../../scss/abstracts/mixins.scss';
+@import '../../../scss/abstracts/variables.scss';
+
+.container {
+  width: calc($w-full - 40px);
+  @include flex(row, space-between, center);
+  border-radius: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  margin: $space 0rem;
+  background-color: color(secondary);
+
+  .container__input {
+    background-color: transparent;
+    border: none;
+    width: $w-full;
+    outline: none;
+    font-size: 0.875rem;
+  }
+}
