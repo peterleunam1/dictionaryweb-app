@@ -1,0 +1,19 @@
+@import 'scss/abstracts/variables';
+
+.dark {
+  background-color: color(bg-dt);
+  color: color(text-dt);
+}
+.light {
+  background-color: color(bg-lt);
+  color: color(text-lt);
+}
+.Epilogue {
+  font-family: 'Epilogue', sans-serif;
+}
+.Montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+.Roboto {
+  font-family: 'Roboto', sans-serif;
+}
