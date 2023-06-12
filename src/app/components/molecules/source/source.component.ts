@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-source',
   templateUrl: './source.component.html',
   styleUrls: ['./source.component.scss'],
 })
-export class SourceComponent {}
+export class SourceComponent {
+  @Input() link: string = '';
+}

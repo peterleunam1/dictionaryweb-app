@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Phonetic } from 'src/app/models/search-model';
 import { toPlayAudio } from 'src/app/utils/toPlayAudio.util';
+import { getPhonetic } from 'src/app/utils/getPhonetic.util';
 
 @Component({
   selector: 'app-play',
@@ -7,12 +9,12 @@ import { toPlayAudio } from 'src/app/utils/toPlayAudio.util';
   styleUrls: ['./play.component.scss'],
 })
 export class PlayComponent {
+  @Input() phonetics: Phonetic[] = [];
   isAudioPlaying: boolean = false;
+
   handleAudio() {
     this.isAudioPlaying = true;
-    toPlayAudio(
-      'https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3'
-    ).onended = () => {
+    toPlayAudio(getPhonetic(this.phonetics) as string).onended = () => {
       this.isAudioPlaying = false;
     };
   }

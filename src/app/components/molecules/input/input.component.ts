@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -9,4 +9,11 @@ export class InputComponent {
   @Input() placeholder: string = '';
   @Input() regex: string = '';
   @Input() isRequired: boolean = false;
+
+  @Output() OuptChange = new EventEmitter<string>();
+
+  handleChange(e: Event) {
+    const value = (e.target as HTMLInputElement).value;
+    this.OuptChange.emit(value);
+  }
 }

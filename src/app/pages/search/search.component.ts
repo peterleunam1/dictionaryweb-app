@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map } from 'rxjs';
-import { initalState } from 'src/app/constants/initial-state.constant';
 import { KeywordMeaning } from 'src/app/models/search-model';
 import { MeaningService } from 'src/app/services/meaning/meaning.service';
 
@@ -13,7 +12,7 @@ import { MeaningService } from 'src/app/services/meaning/meaning.service';
 export class SearchComponent {
   constructor(private service: MeaningService, private route: ActivatedRoute) {}
 
-  response: KeywordMeaning = initalState;
+  response: KeywordMeaning[] = [];
   keyword$: Observable<string> = new Observable();
 
   isLoading: boolean = false;
@@ -31,10 +30,11 @@ export class SearchComponent {
       this.service.getKeywordMeaning(keyword).subscribe({
         next: data => {
           this.response = data;
+          console.log(this.response);
           this.setIsLoading(false);
         },
         error: () => {
-          this.response = initalState;
+          this.response = [];
           this.setIsLoading(false);
         },
       });

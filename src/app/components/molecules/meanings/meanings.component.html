@@ -1,29 +1,25 @@
-<app-separator orientation="horizontal" [withText]="true">noun</app-separator>
-<section class="section">
-  <h4 class="section__title">Meaning</h4>
-  <ul class="section__list">
-    <app-definition />
-    <app-definition />
-    <app-definition />
-  </ul>
-  <span class="section__synonims">
-    <p>Synonims</p>
-    <app-purple-text [isBold]="true">pedro, agames</app-purple-text>
-  </span>
-</section>
-<!-- <app-separator orientation="horizontal" [withText]="true">verb</app-separator>
-<section class="section">
-  <h4 class="section__title">Meaning</h4>
-  <ul>
-    <li class="li">
-      Lorem ipsum dolor, sit amet cocommodi, repudiandae cum recusandae id
-      nesciunt quibusdam nemo veniam?
-    </li>
-    <li class="li">Lorem ipsum dolor, sit amet</li>
-    <li class="li">
-      Lorem ipsum dolor, sitcommodi, repudiandae cum recusandae id nesciunt
-      quibusdam nemo veniam?
-    </li>
-    <li class="li">Lorem ipsum dolor, sit a</li>
-  </ul>
-</section> -->
+<div *ngFor="let meaning of meanings">
+  <app-separator orientation="horizontal" [withText]="true">{{
+    meaning.partOfSpeech
+  }}</app-separator>
+  <section class="section">
+    <h4 class="section__title">Meaning</h4>
+    <ul class="section__list">
+      <app-definition
+        *ngFor="let definition of meaning.definitions"
+        [definition]="definition.definition"
+        [example]="definition.example || ''" />
+    </ul>
+    <span class="section__synonims" *ngIf="meaning.synonyms.length">
+      <p>Synonims</p>
+      <div class="section__synonims--terms">
+        <app-purple-text
+          [isBold]="true"
+          *ngFor="let synonim of meaning.synonyms"
+          [routerLink]="['/search/', synonim]"
+          >{{ synonim }}</app-purple-text
+        >
+      </div>
+    </span>
+  </section>
+</div>

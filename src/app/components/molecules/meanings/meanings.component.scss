@@ -14,8 +14,13 @@
     p {
       font-weight: $lighter;
     }
+    .section__synonims--terms {
+      cursor: pointer;
+      @include flex(row, flex-start, center);
+      gap: $space;
+    }
   }
-  .section__list{
+  .section__list {
     list-style: none;
   }
 }

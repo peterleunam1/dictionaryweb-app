@@ -1,9 +1,11 @@
-<header class="header">
-  <div>
-    <h1 class="header__title">keyboard</h1>
-    <app-purple-text>/:lorem:4:/</app-purple-text>
-  </div>
-  <app-play></app-play>
-</header>
-<app-meanings></app-meanings>
-<app-source></app-source>
+<div *ngIf="data">
+  <header class="header">
+    <div>
+      <h1 class="header__title">{{ data.word || '' }}</h1>
+      <app-purple-text>{{ data.phonetic }}</app-purple-text>
+    </div>
+    <app-play [phonetics]="data.phonetics" />
+  </header>
+  <app-meanings [meanings]="data.meanings"></app-meanings>
+  <app-source [link]="data.sourceUrls[0]"></app-source>
+</div>

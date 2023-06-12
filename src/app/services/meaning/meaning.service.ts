@@ -10,8 +10,8 @@ import { BASE_URL } from 'src/app/constants/base-url.constant';
 export class MeaningService {
   constructor(private http: HttpClient) {}
 
-  getKeywordMeaning(keyword: string): Observable<KeywordMeaning> {
-    return this.http.get<KeywordMeaning>(BASE_URL + `/${keyword}`).pipe(
+  getKeywordMeaning(keyword: string): Observable<KeywordMeaning[]> {
+    return this.http.get<KeywordMeaning[]>(BASE_URL + `/${keyword}`).pipe(
       catchError((error: HttpErrorResponse) => {
         return throwError(() => error.message);
       })

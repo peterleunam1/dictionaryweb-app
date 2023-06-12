@@ -1,9 +1,10 @@
 import { Phonetic } from '../models/search-model';
 
-export const fAudio = (phonetics: Phonetic[]) => {
+export const getPhonetic = (phonetics: Phonetic[]) => {
   if (phonetics.length > 0) {
-    const audio = phonetics.find(p => p.audio !== '') || undefined;
-    return audio;
+    const audio =
+      phonetics.find(phonetic => phonetic.audio !== '') || undefined;
+    return audio?.audio;
   }
   return undefined;
 };

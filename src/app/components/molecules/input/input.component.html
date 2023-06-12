@@ -4,6 +4,7 @@
     placeholder="{{ placeholder }}"
     pattern="{{ regex }}"
     required="{{ isRequired }}"
-    class="container__input" />
+    class="container__input"
+    (change)="handleChange($event)" />
   <app-icon icon="fa-solid fa-magnifying-glass" [color]="true" />
 </div>

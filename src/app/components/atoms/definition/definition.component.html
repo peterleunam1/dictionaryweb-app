@@ -1,9 +1,6 @@
 <li class="li">
   <span class="li__content">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quod
-      dolorum! Doloremque?
-    </p>
-    <p class="li__example">"Lorem ipsum dolor sit."</p>
+    <p>{{ definition }}</p>
+    <p class="li__example" *ngIf="example">e.g: "{{ example }}"</p>
   </span>
 </li>
