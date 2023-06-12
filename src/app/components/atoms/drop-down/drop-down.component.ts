@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { typographies } from 'src/app/constants/typography';
+import { typographies } from 'src/app/constants/typography.constant';
 import { AppStore } from 'src/app/models/store.model';
 import { TypographyName } from 'src/app/models/theme.model';
 @Component({

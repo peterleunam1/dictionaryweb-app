@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { ThemeActions } from '../actions/theme.actions';
+import { ThemeActions } from '../actions/theme.action';
 
 const initialState: string = 'light';
 

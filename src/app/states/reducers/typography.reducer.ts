@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { TypographyActions } from '../actions/typography.actions';
+import { TypographyActions } from '../actions/typography.action';
 import { TypographyName } from 'src/app/models/theme.model';
 
 const initialState: TypographyName = {

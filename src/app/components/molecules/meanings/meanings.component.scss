@@ -1,0 +1,21 @@
+@import '../../../scss/abstracts/mixins.scss';
+@import '../../../scss/abstracts/variables.scss';
+
+.section {
+  margin: 1.25rem 0 3.125rem 0;
+  .section__title {
+    font-weight: $lighter;
+    margin: 0;
+  }
+  .section__synonims {
+    @include flex(row, flex-start, center);
+    margin: 0;
+    gap: $space;
+    p {
+      font-weight: $lighter;
+    }
+  }
+  .section__list{
+    list-style: none;
+  }
+}

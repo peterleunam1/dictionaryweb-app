@@ -8,13 +8,15 @@ $colors: (
   bg-dt: #000000,
 
   //generals
-  error: #c9201d,
-  accent: #797979,
   primary: blueviolet,
   secondary: #f4f4f4,
+  tertiary: #797979,
+  error: #c9201d,
+  accent: #e9d0fa,
 );
 $space: .9375rem;
 $w-full: 100%;
+$lighter: 260;
 
 @function color($color-name) {
   @return map-get($colors, $color-name);

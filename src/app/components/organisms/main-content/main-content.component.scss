@@ -2,12 +2,9 @@
 @import '../../../scss/abstracts/variables.scss';
 
 .header {
-  width: $w-full;
-  height: 10vh;
   @include flex(row, space-between, center);
-
-  .header__content {
-    @include flex(row, center, center);
-    gap: 2.8125rem;
+  width: $w-full;
+  .header__title {
+    margin: 1.5625rem 0 .3125rem 0;
   }
 }

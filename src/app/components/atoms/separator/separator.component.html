@@ -1,0 +1,8 @@
+<div class="separator {{ orientation }}" *ngIf="!withText">.</div>
+
+<div *ngIf="orientation === 'horizontal' && withText" class="separator--text">
+  <strong>
+    <ng-content></ng-content>
+  </strong>
+  <span class="separator horizontal">.</span>
+</div>

@@ -1,0 +1,17 @@
+@import '../../../scss/abstracts/variables.scss';
+@import '../../../scss/abstracts/mixins';
+
+.audio {
+  @include flex(row, center, center);
+  width: 3.25rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  background-color: color(accent);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

@@ -13,6 +13,13 @@ import { LayoutComponent } from './components/templates/layout/layout.component'
 import { StoreModule } from '@ngrx/store';
 import { STORE } from './states/app.state';
 import { InputComponent } from './components/molecules/input/input.component';
+import { PlayComponent } from './components/molecules/play/play.component';
+import { PurpleTextComponent } from './components/atoms/purple-text/purple-text.component';
+import { SeparatorComponent } from './components/atoms/separator/separator.component';
+import { MainContentComponent } from './components/organisms/main-content/main-content.component';
+import { MeaningsComponent } from './components/molecules/meanings/meanings.component';
+import { DefinitionComponent } from './components/atoms/definition/definition.component';
+import { SourceComponent } from './components/molecules/source/source.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +32,13 @@ import { InputComponent } from './components/molecules/input/input.component';
     HeaderComponent,
     LayoutComponent,
     InputComponent,
+    PlayComponent,
+    PurpleTextComponent,
+    SeparatorComponent,
+    MainContentComponent,
+    MeaningsComponent,
+    DefinitionComponent,
+    SourceComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, StoreModule.forRoot(STORE)],
   providers: [],

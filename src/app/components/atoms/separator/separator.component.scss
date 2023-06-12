@@ -1,0 +1,27 @@
+@import '../../../scss/abstracts/variables.scss';
+@import '../../../scss/abstracts/mixins.scss';
+
+.separator {
+  background-color: #f0f0f0;
+  color: transparent;
+}
+
+.vertical {
+  height: $w-full;
+  width: 0.0625rem;
+}
+.horizontal {
+  width: $w-full;
+  height: 0.0625rem;
+}
+.separator--text {
+  @include flex(row, space-between, center);
+  gap: $space;
+  width: 100%;
+  margin-top: 2.5rem;
+  strong {
+    font-family: 'Cooper Old Style BQ';
+    font-style: italic;
+    font-size: 1.25rem;
+  }
+}
