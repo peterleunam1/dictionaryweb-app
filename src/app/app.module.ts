@@ -20,6 +20,8 @@ import { MainContentComponent } from './components/organisms/main-content/main-c
 import { MeaningsComponent } from './components/molecules/meanings/meanings.component';
 import { DefinitionComponent } from './components/atoms/definition/definition.component';
 import { SourceComponent } from './components/molecules/source/source.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,14 @@ import { SourceComponent } from './components/molecules/source/source.component'
     MeaningsComponent,
     DefinitionComponent,
     SourceComponent,
+    SearchComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, StoreModule.forRoot(STORE)],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    StoreModule.forRoot(STORE),
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

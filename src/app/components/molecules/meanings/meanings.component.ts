@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-meanings',
   templateUrl: './meanings.component.html',
-  styleUrls: ['./meanings.component.scss']
+  styleUrls: ['./meanings.component.scss'],
 })
-export class MeaningsComponent {
-
-}
+export class MeaningsComponent {}

@@ -1,13 +1,4 @@
-export interface Phonetic {
-  audio: string;
-  license?: License;
-  sourceUrl?: string;
-  text: string;
-}
-export interface License {
-  name: string;
-  url: string;
-}
+import { Phonetic } from '../models/search-model';
 
 export const fAudio = (phonetics: Phonetic[]) => {
   if (phonetics.length > 0) {
