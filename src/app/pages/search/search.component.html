@@ -1,3 +1,8 @@
 <app-layout>
-  <app-main-content [data]="response[0]" />
+  <app-main-content
+    [data]="response[0]"
+    *ngIf="!isLoading; else elseBlockLoading" />
+  <ng-template #elseBlockLoading>
+    <app-main-skeleton />
+  </ng-template>
 </app-layout>

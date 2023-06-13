@@ -22,6 +22,8 @@ import { DefinitionComponent } from './components/atoms/definition/definition.co
 import { SourceComponent } from './components/molecules/source/source.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './pages/search/search.component';
+import { LoaderComponent } from './components/atoms/loader/loader.component';
+import { MainSkeletonComponent } from './components/molecules/main-skeleton/main-skeleton.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { SearchComponent } from './pages/search/search.component';
     DefinitionComponent,
     SourceComponent,
     SearchComponent,
+    LoaderComponent,
+    MainSkeletonComponent,
   ],
   imports: [
     BrowserModule,

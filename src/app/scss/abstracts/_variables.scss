@@ -1,11 +1,28 @@
 $colors: (
+  
   // lightTheme
   text-lt: #3f3f3f,
   bg-lt: #ffffff,
+  skeleton-lt:#f6f7f8,
+  gradient-lt: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  ),
 
   // darkTheme
   text-dt: #e2e2e2,
   bg-dt: #000000,
+  skeleton-dt: #242424,
+  gradient-dt: linear-gradient(
+    to right,
+    #242424 0%,
+    #222121 20%,
+    #242424 40%,
+    #242424 100%
+  ),
 
   //generals
   primary: blueviolet,

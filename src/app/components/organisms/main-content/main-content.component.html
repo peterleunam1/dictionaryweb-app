@@ -1,4 +1,4 @@
-<div *ngIf="data">
+<div *ngIf="data; else elseBlockData">
   <header class="header">
     <div>
       <h1 class="header__title">{{ data.word || '' }}</h1>
@@ -9,3 +9,6 @@
   <app-meanings [meanings]="data.meanings"></app-meanings>
   <app-source [link]="data.sourceUrls[0]"></app-source>
 </div>
+<ng-template #elseBlockData>
+  <h2>No se encontraron resultados en la búsqueda...</h2>
+</ng-template>

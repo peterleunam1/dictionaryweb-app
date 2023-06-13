@@ -7,17 +7,17 @@
 }
 
 .vertical {
-  height: $w-full;
-  width: .0625rem;
+  @include size(.0625rem, $w-full);
 }
+
 .horizontal {
-  width: $w-full;
-  height: .0625rem;
+  @include size($w-full, .0625rem);
 }
+
 .separator--text {
   @include flex(row, space-between, center);
   gap: $space;
-  width: 100%;
+  width: $w-full;
   margin-top: 2.5rem;
   
   strong {

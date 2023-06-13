@@ -1,0 +1,51 @@
+@import '../../../scss/abstracts/variables.scss';
+@import '../../../scss/abstracts/mixins.scss';
+
+.article {
+  background-repeat: no-repeat;
+  // display: inline-block;
+  position: relative;
+  border-radius: $space;
+  animation: placeHolderShimmer 2s linear infinite forwards;
+  margin:4px 0px;
+
+  &--light {
+    background-color: color(skeleton-lt);
+    background-image: color(gradient-lt);
+  }
+  &--dark {
+    background-color: color(skeleton-dt);
+    background-image: color(gradient-dt);
+  }
+
+  &--rounded {
+    border-radius: $w-full;
+    @include size(5rem, 5rem);
+  }
+
+  &--minimum {
+    @include size(7%, .9375rem);
+  }
+
+  &--small {
+    @include size(20%, 1.1rem);
+  }
+
+  &--medium {
+    @include size(48%, 1.875rem);
+  }
+
+  &--large {
+    @include size(100%, .8rem);
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -29.25rem 0;
+  }
+
+  100% {
+    background-position: 29.25rem 0;
+  }
+}

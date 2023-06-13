@@ -3,9 +3,8 @@
 
 .audio {
   @include flex(row, center, center);
-  width: 3.25rem;
-  height: 3.125rem;
-  border-radius: 50%;
+  @include size(3.25rem, 3.125rem);
+  border-radius: $w-full;
   background-color: color(accent);
   cursor: pointer;
   border: none;
@@ -28,8 +27,7 @@
     &::before {
       content: '';
       position: absolute;
-      width: 75px;
-      height: .125rem;
+      @include size(75px, .125rem);
       background-color: color(error);
       transform: rotate(45deg);
       z-index: 5;
