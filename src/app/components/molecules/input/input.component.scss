@@ -4,16 +4,16 @@
 .container {
   width: calc($w-full - 40px);
   @include flex(row, space-between, center);
-  border-radius: 0.5rem;
-  padding: 0.625rem 1.25rem;
-  margin: $space 0rem;
+  border-radius: .5rem;
+  padding: .625rem 1.25rem;
+  margin: $space 0;
   background-color: color(secondary);
 
-  .container__input {
+  &__input {
     background-color: transparent;
     border: none;
     width: $w-full;
     outline: none;
-    font-size: 0.875rem;
+    font-size: .875rem;
   }
 }

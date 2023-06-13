@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppStore } from 'src/app/models/store.model';
+import { AppStore } from 'src/app/models/states/store.model';
+import { themeConstants } from 'src/app/constants/theme.constant';
+import { icon } from 'src/app/constants/icons.constant';
+import { actionsHandler } from 'src/app/constants/actions-handler.constant';
 
 @Component({
   selector: 'app-switch',
@@ -10,16 +13,17 @@ import { AppStore } from 'src/app/models/store.model';
 export class SwitchComponent {
   isActive = false;
   className: string = '';
-  icon: string = 'fa-regular fa-moon';
+  icon: string = icon.moon;
   constructor(private store: Store<AppStore>) {}
 
   setIsActive(): void {
+    const { toggleTheme } = actionsHandler.theme;
     this.isActive = !this.isActive;
     this.className = this.isActive ? 'active' : '';
-    this.icon = this.isActive ? 'fa-regular fa-sun' : 'fa-regular fa-moon';
+    this.icon = this.isActive ? icon.sun : icon.moon;
     this.store.dispatch({
-      type: '[Theme] Toggle Theme',
-      theme: `${this.isActive ? 'dark' : 'light'}`,
+      type: toggleTheme,
+      theme: `${this.isActive ? themeConstants.dark : themeConstants.light}`,
     });
   }
 }

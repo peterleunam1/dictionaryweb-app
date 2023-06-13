@@ -4,13 +4,13 @@
 .source {
   @include flex(row, flex-start, center);
   gap: $space;
-  font-size: 0.75rem;
+  font-size: .75rem;
 
-  .source__title {
+  &__title {
     font-weight: $lighter;
     margin: 0;
   }
-  .source__content {
+  &__content {
     @include flex(row, flex-start, center);
     gap: $space;
     cursor: pointer;

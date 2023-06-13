@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map } from 'rxjs';
-import { KeywordMeaning } from 'src/app/models/search-model';
+import { KeywordMeaning } from 'src/app/models/pages/search.model';
 import { MeaningService } from 'src/app/services/meaning/meaning.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { MeaningService } from 'src/app/services/meaning/meaning.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit {
   constructor(private service: MeaningService, private route: ActivatedRoute) {}
 
   response: KeywordMeaning[] = [];
@@ -40,7 +40,6 @@ export class SearchComponent {
       });
     });
   }
-  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
   ngOnInit(): void {
     this.getSearchesByKeyword();
   }

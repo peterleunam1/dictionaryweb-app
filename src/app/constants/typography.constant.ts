@@ -1,4 +1,4 @@
-import { Typography } from '../models/theme.model';
+import { Typography } from '../models/constants/theme.model';
 
 export const typographies: Typography[] = [
   {

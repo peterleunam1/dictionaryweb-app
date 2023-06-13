@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
-import { KeywordMeaning } from 'src/app/models/search-model';
+import { KeywordMeaning } from 'src/app/models/pages/search.model';
 import { BASE_URL } from 'src/app/constants/base-url.constant';
 
 @Injectable({

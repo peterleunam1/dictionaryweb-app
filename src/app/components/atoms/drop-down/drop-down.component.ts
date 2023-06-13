@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { typographies } from 'src/app/constants/typography.constant';
-import { AppStore } from 'src/app/models/store.model';
-import { TypographyName } from 'src/app/models/theme.model';
+import { AppStore } from 'src/app/models/states/store.model';
+import { TypographyName } from 'src/app/models/constants/theme.model';
+import { actionsHandler } from 'src/app/constants/actions-handler.constant';
+
 @Component({
   selector: 'app-drop-down',
   templateUrl: './drop-down.component.html',
@@ -15,10 +17,11 @@ export class DropDownComponent {
   constructor(private store: Store<AppStore>) {}
 
   onChange(value: Event): void {
+    const { setTypography } = actionsHandler.typography;
     this.value = (value.target as HTMLInputElement)
       .value as TypographyName['name'];
     this.store.dispatch({
-      type: '[Typography] Set Typography',
+      type: setTypography,
       typography: { name: this.value },
     });
   }

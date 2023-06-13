@@ -4,7 +4,7 @@
 .header {
   @include flex(row, space-between, center);
   width: $w-full;
-  .header__title {
+  &__title {
     margin: 1.5625rem 0 .3125rem 0;
   }
 }

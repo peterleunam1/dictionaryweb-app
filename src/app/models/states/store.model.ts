@@ -1,4 +1,4 @@
-import { Theme, TypographyName } from './theme.model';
+import { Theme, TypographyName } from '../constants/theme.model';
 
 export interface AppStore {
   theme: string;

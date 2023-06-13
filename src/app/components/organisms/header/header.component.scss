@@ -6,7 +6,7 @@
   height: 10vh;
   @include flex(row, space-between, center);
 
-  .header__content {
+  &__content {
     @include flex(row, center, center);
     gap: 2.8125rem;
   }

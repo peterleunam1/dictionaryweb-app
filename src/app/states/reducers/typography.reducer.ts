@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { TypographyActions } from '../actions/typography.action';
-import { TypographyName } from 'src/app/models/theme.model';
+import { TypographyName } from 'src/app/models/constants/theme.model';
 
 const initialState: TypographyName = {
   name: 'Epilogue',

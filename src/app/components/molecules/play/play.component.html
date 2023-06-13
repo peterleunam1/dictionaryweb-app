@@ -1,8 +1,8 @@
 <button
   class="audio"
   (click)="handleAudio()"
-  [disabled]="phonetics.length > 0 ? false : true">
+  [disabled]="phonetics.length ? false : true">
   <app-icon
-    [icon]="isAudioPlaying ? 'fa-solid fa-volume-high' : 'fa-solid fa-play'"
+    [icon]="isAudioPlaying ? icons.volume : icons.play"
     [color]="true" />
 </button>

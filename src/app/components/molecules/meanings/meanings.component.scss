@@ -3,24 +3,27 @@
 
 .section {
   margin: 1.25rem 0 3.125rem 0;
-  .section__title {
+
+  &__title {
     font-weight: $lighter;
     margin: 0;
   }
-  .section__synonims {
+
+  &__synonims {
     @include flex(row, flex-start, center);
     margin: 0;
     gap: $space;
     p {
       font-weight: $lighter;
     }
-    .section__synonims--terms {
+    &--terms {
       cursor: pointer;
       @include flex(row, flex-start, center);
       gap: $space;
     }
   }
-  .section__list {
+  
+  &__list {
     list-style: none;
   }
 }

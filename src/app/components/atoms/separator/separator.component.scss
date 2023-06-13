@@ -8,17 +8,18 @@
 
 .vertical {
   height: $w-full;
-  width: 0.0625rem;
+  width: .0625rem;
 }
 .horizontal {
   width: $w-full;
-  height: 0.0625rem;
+  height: .0625rem;
 }
 .separator--text {
   @include flex(row, space-between, center);
   gap: $space;
   width: 100%;
   margin-top: 2.5rem;
+  
   strong {
     font-family: 'Cooper Old Style BQ';
     font-style: italic;

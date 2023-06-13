@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Meaning } from 'src/app/models/search-model';
+import { Meaning } from 'src/app/models/pages/search.model';
 
 @Component({
   selector: 'app-meanings',

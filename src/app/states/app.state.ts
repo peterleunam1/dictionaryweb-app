@@ -1,5 +1,5 @@
 import { ActionReducerMap } from '@ngrx/store';
-import { AppStore } from '../models/store.model';
+import { AppStore } from '../models/states/store.model';
 import { themeReducer } from './reducers/theme.reducer';
 import { typographyReducer } from './reducers/typography.reducer';
 
