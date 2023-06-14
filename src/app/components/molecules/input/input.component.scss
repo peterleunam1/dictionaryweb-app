@@ -8,6 +8,7 @@
   padding: .625rem 1.25rem;
   margin: $space 0;
   background-color: color(secondary);
+  transition: border .3s ease;
 
   &__input {
     background-color: transparent;
@@ -16,4 +17,14 @@
     outline: none;
     font-size: .875rem;
   }
+  &__error{
+    border: .0625rem solid color(error);
+  }
+}
+
+.error {
+  color: color(error);
+  font-size: .75rem;
+  margin-top: .25rem;
+  transition: color .3s ease;
 }

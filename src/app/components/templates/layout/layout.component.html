@@ -2,8 +2,8 @@
   <app-header></app-header>
   <form (submit)="handleSubmit($event)">
     <app-input
-      placeholder="Search for a word here..."
-      regex="^\s*[a-zA-Z]*\s*$"
+      placeholder="{{ placeholder }}"
+      regex="{{ regex }}"
       (OuptChange)="handleOuptChange($event)" />
   </form>
   <ng-content></ng-content>

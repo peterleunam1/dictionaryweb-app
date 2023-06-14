@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { icon } from 'src/app/constants/icons.constant';
+import { inputTexts } from 'src/app/constants/ui-texts';
+
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
@@ -11,9 +13,17 @@ export class InputComponent {
   @Input() isRequired: boolean = false;
   @Output() OuptChange = new EventEmitter<string>();
   icon: string = icon.search;
+  error: string = '';
+  value: string = '';
 
-  handleChange(e: Event) {
-    const value = (e.target as HTMLInputElement).value;
-    this.OuptChange.emit(value);
+  handleKeyUp(e: Event) {
+    this.value = (e.target as HTMLInputElement).value;
+    const regex = new RegExp(this.regex);
+    !regex.test(this.value)
+      ? (this.error = inputTexts.errorMessage)
+      : (this.error = '');
+  }
+  handleChange() {
+    !this.error && this.value && this.OuptChange.emit('');
   }
 }

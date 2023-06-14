@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { orientations } from 'src/app/constants/orientations.constant';
-import { OrientationsModel } from 'src/app/models/constants/orientations.model';
+import { orientations } from 'src/app/constants/ui-texts';
+import { OrientationsModel } from 'src/app/models/constants/ui-texts.model';
 
 @Component({
   selector: 'app-separator',

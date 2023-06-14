@@ -1,10 +1,11 @@
-<div class="container">
+<div class="container {{ error && 'container__error' }}">
   <input
     type="text"
     placeholder="{{ placeholder }}"
     pattern="{{ regex }}"
-    required="{{ isRequired }}"
     class="container__input"
-    (change)="handleChange($event)" />
+    (change)="handleChange()"
+    (keyup)="handleKeyUp($event)" />
   <app-icon icon="{{ icon }}" [color]="true" />
 </div>
+<p class="{{ error && 'error' }}">{{ error }}</p>
