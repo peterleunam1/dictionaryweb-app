@@ -24,6 +24,6 @@ export class InputComponent {
       : (this.error = '');
   }
   handleChange() {
-    !this.error && this.value && this.OuptChange.emit('');
+    !this.error && this.value && this.OuptChange.emit(this.value);
   }
 }

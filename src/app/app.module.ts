@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './pages/search/search.component';
 import { LoaderComponent } from './components/atoms/loader/loader.component';
 import { MainSkeletonComponent } from './components/molecules/main-skeleton/main-skeleton.component';
+import { NotFoundComponent } from './components/molecules/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { MainSkeletonComponent } from './components/molecules/main-skeleton/main
     SearchComponent,
     LoaderComponent,
     MainSkeletonComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
