@@ -1,6 +1,6 @@
 export const getHours = (date: Date): string => {
-  let hour = new Date(date).getHours();
-  const minutes = new Date(date).getMinutes();
+  let hour = date.getHours();
+  const minutes = date.getMinutes();
   let time = 'am';
   hour >= 12 && (time = 'pm');
   hour > 12 && (hour -= 12);

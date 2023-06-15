@@ -1,5 +1,6 @@
 <div class="layout">
   <app-header></app-header>
+  <strong>{{ isChange$ | async }}</strong>
   <form (submit)="handleSubmit($event)">
     <app-input
       placeholder="{{ placeholder }}"

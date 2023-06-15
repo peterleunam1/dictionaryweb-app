@@ -5,6 +5,8 @@ import { regexs } from 'src/app/constants/regular-expressions.constants';
 import { lastSearches } from 'src/app/models/pages/search.model';
 import { getLocalStorage } from 'src/app/utils/getLocalStorage';
 import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { AppStore } from 'src/app/models/states/store.model';
 
 @Component({
   selector: 'app-layout',
@@ -16,12 +18,13 @@ export class LayoutComponent {
   placeholder: string = inputTexts.placeholder;
   regex: string = regexs.word;
   lastSearches: lastSearches[] = [];
-  constructor(private router: Router) {}
+  isChange$: Observable<boolean> = new Observable();
+  constructor(private router: Router, private store: Store<AppStore>) {}
   handleSubmit(e: Event) {
     e.preventDefault();
   }
   handleOuptChange(value: string) {
     this.keyword = value;
-    this.router.navigate(['/search/', this.keyword]);
+    this.router.navigate(['/search/', this.keyword.toLocaleLowerCase()]);
   }
 }
