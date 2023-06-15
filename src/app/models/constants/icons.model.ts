@@ -5,4 +5,6 @@ export interface Icons {
   volume: string;
   play: string;
   navigation: string;
+  close: string;
+  word: string;
 }

@@ -1,0 +1,15 @@
+<section class="section">
+  <h4 class="section__title">Last searches</h4>
+  <div *ngIf="lastSearches.length; else elseBlock">
+    <div class="section__content">
+      <button class="section__button" (click)="handleClear()">Limpiar</button>
+    </div>
+    <app-word
+      *ngFor="let search of lastSearches"
+      [word]="search.keyowrd"
+      [date]="search.date" />
+  </div>
+  <ng-template #elseBlock>
+    <p class="section__message">No searches yet</p>
+  </ng-template>
+</section>

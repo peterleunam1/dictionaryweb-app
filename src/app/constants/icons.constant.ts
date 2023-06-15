@@ -7,4 +7,6 @@ export const icon: Icons = {
   volume: 'fa-solid fa-volume-high',
   play: 'fa-solid fa-play',
   navigation: 'fa-solid fa-arrow-up-right-from-square',
+  close: 'fa-solid fa-xmark',
+  word: 'fa-solid fa-',
 };

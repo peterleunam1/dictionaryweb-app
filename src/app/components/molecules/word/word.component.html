@@ -1,0 +1,14 @@
+<article class="article">
+  <span class="article__content">
+    <div class="article__icon">
+      <app-icon icon="{{ icons.word }}{{ word.charAt(0) }}" [color]="true" />
+    </div>
+    <app-separator orientation="vertical" />
+    <p [routerLink]="['/search/', word]">{{ word }}</p>
+  </span>
+  <app-icon icon="{{ icons.close }}" (click)="handleDelete()" />
+</article>
+<span class="date">
+  <small>{{ day }}</small>
+  <small>{{ hours }}</small>
+</span>

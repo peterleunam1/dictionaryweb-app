@@ -4,11 +4,10 @@
 .audio {
   @include flex(row, center, center);
   @include size(3.25rem, 3.125rem);
+  @include resetInput;
   border-radius: $w-full;
   background-color: color(accent);
   cursor: pointer;
-  border: none;
-  outline: none;
   transition: all .3s ease;
 
   &:hover {

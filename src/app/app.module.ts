@@ -25,6 +25,8 @@ import { SearchComponent } from './pages/search/search.component';
 import { LoaderComponent } from './components/atoms/loader/loader.component';
 import { MainSkeletonComponent } from './components/molecules/main-skeleton/main-skeleton.component';
 import { NotFoundComponent } from './components/molecules/not-found/not-found.component';
+import { WordComponent } from './components/molecules/word/word.component';
+import { LastSearchesComponent } from './components/organisms/last-searches/last-searches.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { NotFoundComponent } from './components/molecules/not-found/not-found.co
     LoaderComponent,
     MainSkeletonComponent,
     NotFoundComponent,
+    WordComponent,
+    LastSearchesComponent,
   ],
   imports: [
     BrowserModule,

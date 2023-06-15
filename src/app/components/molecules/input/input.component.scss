@@ -11,10 +11,8 @@
   transition: border .3s ease;
 
   &__input {
-    background-color: transparent;
-    border: none;
+    @include resetInput;
     width: $w-full;
-    outline: none;
     font-size: .875rem;
   }
   &__error{

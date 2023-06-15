@@ -1,6 +1,8 @@
 @import '../../../scss/abstracts/variables.scss';
 
-.color {
-  color: color(primary);
-  text-align: center;
+.icon{
+  cursor: pointer;
+  &--color{
+    color: color(primary);
+  }
 }

@@ -1,3 +1,12 @@
 <app-layout>
-  <p>Home page</p>
+  <app-last-searches
+    [lastSearches]="lastSearches"
+    [handleClear]="handleClear" />
+  <!-- <section>
+    <article *ngFor="let word of lastSearches">
+      <a [routerLink]="['/search', word]">{{ word.keyowrd }}</a>
+      <p>{{ word.date }}</p>
+    </article>
+  </section>
+  <button *ngIf="lastSearches.length" (click)="handleClear()">limpiar</button> -->
 </app-layout>

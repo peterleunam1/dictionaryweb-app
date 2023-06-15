@@ -1,0 +1,38 @@
+@import '../../../scss/abstracts/variables.scss';
+@import '../../../scss/abstracts/mixins.scss';
+
+.article {
+  @include flex(row, space-between, center);
+  border-bottom: .0625rem solid #f0f0f0;
+  gap: $space;
+
+  &__content {
+    @include flex(row, center, center);
+    margin-bottom: .625rem;
+    p {
+      margin: 0;
+      margin-left: 1.125rem;
+      font-size: .75rem;
+      text-transform: uppercase;
+      transition: font-weight .2s ease;
+      cursor: pointer;
+      &:hover {
+        font-weight: bolder;
+      }
+    }
+  }
+
+  &__icon {
+    @include flex(row, center, center);
+    padding: 0 1.125rem;
+  }
+}
+
+.date {
+  @include flex(row, flex-end, center);
+  gap: .625rem;
+  margin-top: .3125rem;
+  font-weight: $lighter;
+  margin-bottom: .625rem;
+  font-size: .75rem;
+}

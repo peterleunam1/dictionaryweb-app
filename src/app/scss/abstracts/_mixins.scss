@@ -10,3 +10,8 @@
   width: $width;
   height: $height;
 }
+@mixin resetInput {
+  border: none;
+  outline: none;
+  background: none;
+}

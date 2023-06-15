@@ -19,6 +19,7 @@
     &--terms {
       cursor: pointer;
       @include flex(row, flex-start, center);
+      flex-wrap: wrap;
       gap: $space;
     }
   }

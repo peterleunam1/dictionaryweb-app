@@ -32,3 +32,8 @@ export interface Phonetic {
   sourceUrl?: string;
   text: string;
 }
+
+export interface lastSearches {
+  keyowrd: string;
+  date: Date;
+}

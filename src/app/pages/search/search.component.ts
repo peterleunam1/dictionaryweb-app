@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map } from 'rxjs';
-import { KeywordMeaning } from 'src/app/models/pages/search.model';
+import {
+  KeywordMeaning,
+  lastSearches,
+} from 'src/app/models/pages/search.model';
 import { MeaningService } from 'src/app/services/meaning/meaning.service';
-
+import { getLocalStorage } from 'src/app/utils/getLocalStorage';
+import { addSearchToLocalStorage } from 'src/app/utils/addSearchToLS';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -30,7 +34,10 @@ export class SearchComponent implements OnInit {
       this.service.getKeywordMeaning(keyword).subscribe({
         next: data => {
           this.response = data;
-          console.log(this.response);
+          addSearchToLocalStorage({
+            keyowrd: keyword,
+            date: new Date(),
+          });
           this.setIsLoading(false);
         },
         error: () => {
@@ -40,6 +47,7 @@ export class SearchComponent implements OnInit {
       });
     });
   }
+
   ngOnInit(): void {
     this.getSearchesByKeyword();
   }
