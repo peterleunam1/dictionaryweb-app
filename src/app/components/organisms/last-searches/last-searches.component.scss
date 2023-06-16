@@ -22,3 +22,8 @@
     }
   }
 }
+.empty{
+  @include flex(column, center, center);
+  gap: 4rem;
+  height: 60vh;
+}

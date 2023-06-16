@@ -1,8 +1,10 @@
 <div class="notfound">
-  <h5>{{ message }}</h5>
+  <p>{{ notFound.message }}</p>
   <section class="error-container">
-    <span><span>4</span></span>
-    <span>0</span>
-    <span><span>4</span></span>
+    <app-letter-animated
+      *ngFor="let number of notFound.code"
+      letter="{{ number.letter }}"
+      [color]="number.color"
+      animation="{{ number.animation }}" />
   </section>
 </div>

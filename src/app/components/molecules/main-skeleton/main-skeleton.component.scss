@@ -2,6 +2,7 @@
 
 .section {
   @include flex(column, center, unset);
+  margin-top: 2.5rem;
 
   &__header {
     @include flex(row, space-between, center);

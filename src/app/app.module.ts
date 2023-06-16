@@ -27,6 +27,7 @@ import { MainSkeletonComponent } from './components/molecules/main-skeleton/main
 import { NotFoundComponent } from './components/molecules/not-found/not-found.component';
 import { WordComponent } from './components/molecules/word/word.component';
 import { LastSearchesComponent } from './components/organisms/last-searches/last-searches.component';
+import { LetterAnimatedComponent } from './components/atoms/letter-animated/letter-animated.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { LastSearchesComponent } from './components/organisms/last-searches/last
     NotFoundComponent,
     WordComponent,
     LastSearchesComponent,
+    LetterAnimatedComponent,
   ],
   imports: [
     BrowserModule,

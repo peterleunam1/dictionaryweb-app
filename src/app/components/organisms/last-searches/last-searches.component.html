@@ -10,6 +10,15 @@
       [date]="search.date" />
   </div>
   <ng-template #elseBlock>
-    <p class="section__message">No searches yet</p>
+    <div class="empty">
+      <span>
+        <app-letter-animated
+          *ngFor="let letter of empty.code"
+          letter="{{ letter.letter }}"
+          [color]="letter.color"
+          animation="{{ letter.animation }}" />
+      </span>
+      <p>{{ empty.message }}</p>
+    </div>
   </ng-template>
 </section>
