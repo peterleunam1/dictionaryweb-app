@@ -7,15 +7,18 @@
   &__header {
     @include flex(row, space-between, center);
   }
+
   &__title {
     @include flex(column, center, unset);
     gap: .3125rem;
     width: 100%;
   }
+
   &__content {
     @include flex(column, center, unset);
     margin-top: 1.125rem;
   }
+  
   &__definitions {
     @include flex(column, center, unset);
     margin: 1rem 0;

@@ -3,14 +3,17 @@
 
 .section {
   width: $w-full;
+
   &__title {
     margin: 1.875rem 0 .625rem 0;
     font-weight: 500;
   }
+
   &__content {
     @include flex(row, flex-end, center);
     margin-bottom: 1.25rem;
   }
+  
   &__button {
     @include resetInput;
     cursor: pointer;
@@ -26,4 +29,5 @@
   @include flex(column, center, center);
   gap: 4rem;
   height: 60vh;
+  text-align: center;
 }

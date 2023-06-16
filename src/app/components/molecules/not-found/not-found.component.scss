@@ -1,8 +1,9 @@
 @import '../../../scss/abstracts/variables.scss';
 @import '../../../scss/abstracts/mixins.scss';
 
-.notfound{
-    @include flex (column-reverse, center, center);
-    gap: 4rem;
-    height: 68vh;
+.notfound {
+  @include flex(column-reverse, center, center);
+  gap: 4rem;
+  height: 68vh;
+  text-align: center;
 }

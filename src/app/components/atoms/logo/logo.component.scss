@@ -2,6 +2,7 @@
 
 .picture {
   cursor: pointer;
+  
   &__img {
     @include size(2.5rem, 2.5rem);
     object-fit: contain;

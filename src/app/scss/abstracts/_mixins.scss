@@ -15,3 +15,23 @@
   outline: none;
   background: none;
 }
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin small-tablet {
+  @media (max-width: $small-tablet) {
+    @content;
+  }
+}
+@mixin large-mobile {
+  @media (max-width: $large-mobile) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

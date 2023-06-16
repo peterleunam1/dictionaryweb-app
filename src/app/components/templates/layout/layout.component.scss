@@ -1,3 +1,5 @@
+@import '../../../scss/abstracts/mixins.scss';
+
 .layout {
   width: 60%;
   max-width: 90rem;
@@ -5,4 +7,12 @@
   min-height: calc(100vh - (.625rem + 3.125rem));
   height: max-content;
   padding: .625rem 0px 3.125rem 0rem;
+
+  @include large-mobile {
+  width: 90%;
+  }
+
+  @include tablet {
+  width: 80%;
+  }
 }

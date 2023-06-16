@@ -34,12 +34,12 @@ $colors: (
 $space: .9375rem;
 $w-full: 100%;
 $lighter: 260;
+$tablet: 768px;
+$small-tablet: 620px;
+$large-mobile: 500px;
+$mobile: 415px;
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
 
-// $tablet: 768px;
-// $mobileL: 425px;
-// $mobile: 375px;
-// $mobileS: 320px;

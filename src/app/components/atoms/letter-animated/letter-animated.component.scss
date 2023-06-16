@@ -1,20 +1,36 @@
 @import '../../../scss/abstracts/variables.scss';
+@import '../../../scss/abstracts/mixins.scss';
 
 .letter {
   text-align: center;
   font-size: 6.25rem;
   font-weight: bolder;
-  margin: 1.5625rem 0.9375rem;
+  margin: 1.5625rem .9375rem;
   color: color(secondary);
   display: inline-block;
   line-height: 0.7;
   position: relative;
+
   &__in {
     display: inline-block;
     position: relative;
   }
+
   &--accent {
     color: color(accent);
+  }
+
+  @include small-tablet {
+    font-size: 5rem;
+  }
+
+  @include large-mobile {
+    font-size: 4rem;
+  }
+
+  @include mobile {
+    font-size: 3rem;
+    margin: 1.5625rem .625rem;
   }
 }
 

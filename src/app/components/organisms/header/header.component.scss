@@ -9,5 +9,9 @@
   &__content {
     @include flex(row, center, center);
     gap: 2.8125rem;
+    
+    @include large-mobile {
+      gap: 1rem;
+    }
   }
 }

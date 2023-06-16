@@ -13,9 +13,11 @@
     @include flex(row, flex-start, center);
     margin: 0;
     gap: $space;
+
     p {
       font-weight: $lighter;
     }
+    
     &--terms {
       cursor: pointer;
       @include flex(row, flex-start, center);
