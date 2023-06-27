@@ -7,19 +7,25 @@ import { AppStore } from 'src/app/models/states/store.model';
 import { UpdateSearches } from 'src/app/states/actions/searches.action';
 import { getLocalStorage } from 'src/app/utils/getLocalStorage';
 import { getHours, getDays } from 'src/app/utils/getTimes';
+
 @Component({
   selector: 'app-word',
   templateUrl: './word.component.html',
   styleUrls: ['./word.component.scss'],
 })
-export class WordComponent {
+export class WordComponent implements OnInit {
   @Input() word: string = '';
   @Input() date: Date = new Date();
   icons: Icons = icon;
-  hours = getHours(this.date);
-  day = getDays(this.date);
+  hours = '';
+  day = '';
 
   constructor(private store: Store<AppStore>) {}
+
+  getDateTime() {
+    this.hours = getHours(new Date(this.date));
+    this.day = getDays(new Date(this.date));
+  }
 
   handleDelete() {
     const data = getLocalStorage('lastSearches');
@@ -28,5 +34,9 @@ export class WordComponent {
     );
     localStorage.setItem('lastSearches', JSON.stringify(filtered));
     this.store.dispatch(UpdateSearches());
+  }
+
+  ngOnInit(): void {
+    this.getDateTime();
   }
 }
